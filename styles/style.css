@@ -250,7 +250,7 @@ section + section {
     box-shadow: 0px 0px var(--secondary-color);
   }
 
-  .grid li:hover, .grid li a:focus {
+  .grid li:hover, .grid li a:focus, .grid li a:active {
     transform: var(--expanded-transform);
     box-shadow: var(--expanded-shadow);
   }
@@ -306,11 +306,11 @@ section + section {
           transition: var(--default-transition);
         }
 
-        .grid li:hover figure > figcaption, .grid li a:focus figure > figcaption {
+        .grid li:hover figure > figcaption, .grid li a:focus figure > figcaption, .grid li a:active figure > figcaption {
           opacity: .85;
         }
 
-        .grid li a:focus {
+        .grid li a:focus, .grid li a:active {
           outline: none;
         }
 /* =============================================================================
