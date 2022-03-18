@@ -171,6 +171,7 @@ header {
 
   background-color: var(--white-color);
   border-bottom: var(--border-settings);
+  z-index: 100;
 }
 
   header div {
@@ -243,17 +244,19 @@ section + section {
 
   .grid li {
     height: 250px;
-    overflow: hidden;
-
     border-radius: var(--border-radius);
 
     transition: var(--default-transition);
     box-shadow: 0px 0px var(--secondary-color);
   }
 
-  .grid li:hover {
+  .grid li:hover, .grid li a:focus {
     transform: var(--expanded-transform);
     box-shadow: var(--expanded-shadow);
+  }
+
+  .grid li a {
+    border-radius: var(--border-radius);
   }
 
     .grid li a, .grid li figure, .grid li figure > picture {
@@ -303,8 +306,12 @@ section + section {
           transition: var(--default-transition);
         }
 
-        .grid li:hover figure > figcaption {
+        .grid li:hover figure > figcaption, .grid li a:focus figure > figcaption {
           opacity: .85;
+        }
+
+        .grid li a:focus {
+          outline: none;
         }
 /* =============================================================================
   #BUTTONS
