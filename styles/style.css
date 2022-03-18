@@ -15,6 +15,30 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
 *, *:before, *:after { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit; }
 
 
+:root {
+  --primary-color: #141518;
+  --primary-light: #313234;
+  --secondary-color: #ff4d80;
+
+  --text-color: #303030;
+
+  --white-color: #FFFFFF;
+
+  --default-padding: 24px;
+  --default-small-padding: 12px;
+  --default-big-padding: 60px;
+
+  --default-transition: all 250ms ease-in-out;
+
+  --header-height: 65px;
+
+  --border-settings: 2px solid #ededed;
+  --border-radius: 5px;
+
+  --expanded-transform: translate(-5px, -5px);
+  --expanded-shadow: 5px 5px var(--secondary-color);
+}
+
 /* =============================================================================
   #GENERAL
 ============================================================================= */
@@ -33,22 +57,17 @@ html {
 }
 
 body {
-  font-family: brandon-grotesque, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 400;
   font-style: normal;
 
-  color: #1D1D1B;
-  font-size: 18px; font-size: 1.8rem;
+  color: var(--primary-color);
+  font-size: 16px; font-size: 1.6rem;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
   background-color: #ffffff;
-}
-
-/* Container */
-.container {
-  padding: 0 100px;
 }
 
 img {
@@ -68,14 +87,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Heading 1 */
 h1 {
-  margin-bottom: 16px;
-
-  font-size: 35px; font-size: 3.5rem;
+  font-size: 26px; font-size: 2.6rem;
+  margin-bottom: var(--default-small-padding);
 }
 
 /* Heading 2 */
 h2 {
-  margin-bottom: 12px;
   font-size: 22px; font-size: 2.2rem;
 }
 
@@ -84,8 +101,12 @@ h3 {
   font-size: 18px; font-size: 1.8rem;
 }
 
-p {
-  margin-bottom: 2rem;
+p + p {
+  margin-top: var(--default-small-padding);
+}
+
+p + * {
+    margin-top: var(--default-padding);
 }
 
 a {
@@ -102,17 +123,310 @@ em, i {
 }
 
 ul, ol {
-  padding-left: 30px;
-}
-
-ul {
-  list-style: disc;
-}
-
-ol {
-  list-style: decimal;
+  list-style: none;
+  padding-left: 0;
 }
 
 /* =============================================================================
-  #STUFF
+  #LOGO
 ============================================================================= */
+.logo {
+  display: inline-block;
+  line-height: 1.1;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--white-color);
+
+  padding: 10px;
+
+  background-color: var(--primary-color);
+
+  border-radius: var(--border-radius);
+  cursor: pointer;
+
+  transition: var(--default-transition);
+  box-shadow: 0px 0px var(--secondary-color);
+}
+
+.logo:hover {
+  transform: var(--expanded-transform);
+  box-shadow: var(--expanded-shadow);
+}
+/* =============================================================================
+  #HEADER
+============================================================================= */
+header {
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  
+  margin: 0 var(--default-padding);
+  height: var(--header-height);
+
+  background-color: var(--white-color);
+  border-bottom: var(--border-settings);
+}
+
+  header div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  header div,
+  nav, 
+  nav ul, 
+  nav ul li, 
+  nav ul li a {
+    height: 100%;
+  }
+
+    nav ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    nav ul li {
+      transition: var(--default-transition);
+    }
+
+    nav ul li:hover {
+      transform: scale(1.1);
+    }
+
+        nav ul li a {
+          display: flex;
+          align-items: center;
+
+          padding: 0 var(--default-small-padding);
+
+          font-weight: 700;
+          color: var(--primary-color);
+        }
+/* =============================================================================
+  #MAIN
+============================================================================= */
+main {
+  margin: calc(30px + var(--header-height)) var(--default-padding) 30px var(--default-padding);
+}
+
+section + section {
+  padding-top: 30px;
+  margin-top: 30px;
+
+  border-top: var(--border-settings);
+}
+
+/* =============================================================================
+  #GRID
+============================================================================= */
+.grid {
+  display: grid;
+  gap: var(--default-padding);
+
+  grid-template-rows: repeat(4, 1fr);
+}
+
+  .grid li {
+    height: 250px;
+    overflow: hidden;
+
+    border-radius: var(--border-radius);
+
+    transition: var(--default-transition);
+    box-shadow: 0px 0px var(--secondary-color);
+  }
+
+  .grid li:hover {
+    transform: var(--expanded-transform);
+    box-shadow: var(--expanded-shadow);
+  }
+
+    .grid li a, .grid li figure, .grid li figure > picture {
+      display: block;
+      height: 100%;
+    }
+
+      .grid li figure {
+        position: relative;
+      }
+
+        .grid li figure > picture, .grid li figure > picture img {
+          border-radius: var(--border-radius);
+        }
+
+          .grid li figure > picture img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: center;
+          }
+
+        .grid li figure > figcaption {
+          position: absolute;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          text-align: center;
+
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+
+          color: var(--white-color);
+          font-weight: 600;
+          font-size: 18px; font-size: 1.8rem;
+
+          background-color: var(--primary-color);
+          border-radius: var(--border-radius);
+
+          opacity: 0;
+
+          transition: var(--default-transition);
+        }
+
+        .grid li:hover figure > figcaption {
+          opacity: .85;
+        }
+/* =============================================================================
+  #BUTTONS
+============================================================================= */
+button, .btn {
+  position: relative;
+
+  display: inline-block;
+  padding: var(--default-small-padding);
+
+  width: 100%;
+
+  color: var(--white-color);
+
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+
+  cursor: pointer;
+
+  background-color: var(--primary-color);
+
+  box-shadow: 0px 0px var(--secondary-color);
+
+  border-radius: var(--border-radius);
+  border: none;
+
+  transition: var(--default-transition);
+}
+
+.btn:hover {
+  transform: var(--expanded-transform);
+  box-shadow: var(--expanded-shadow);
+}
+
+* + .btn {
+  margin-top: var(--default-padding);
+}
+
+/* =============================================================================
+  #FOOTER
+============================================================================= */
+footer {
+  border-top: var(--border-settings);
+  padding: var(--default-padding);
+
+  text-align: center;
+}
+
+/* =============================================================================
+  #MEDIAQUERIES
+============================================================================= */
+@media screen and (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .btn {
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 700px) {
+}
+
+@media screen and (min-width: 850px) {
+  h1 {
+    margin-bottom: var(--default-padding);
+  }
+
+  section {
+    margin: 0 auto;
+  }
+
+  section, header div {
+    width: 800px;
+  }
+
+  header div {
+    
+  }
+
+  section + section {
+    margin-top: var(--default-big-padding);
+    padding-top: var(--default-big-padding);
+  }
+
+  header {
+    margin: 0;
+  }
+
+  main {
+      margin: calc(40px + var(--header-height)) 0 40px 0;
+  }
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --border-settings: 2px solid #313234;
+  }
+
+  body {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+  }
+
+    header {
+      background-color: var(--primary-color);
+    }
+
+      header ul li a {
+        color: var(--white-color);
+      }
+
+    .logo {
+      color: var(--primary-color);
+      background-color: var(--white-color);
+    }
+
+    button, .btn {
+      background-color: var(--white-color);
+      color: var(--primary-color);
+    }
+} */
