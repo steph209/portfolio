@@ -5,103 +5,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio | Stephanie Jimenez</title>
-  <link href="./styles/style.css?v=3" media="screen" rel="stylesheet" type="text/css">
-
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+  <link href="./styles/style.css?v=4" media="screen" rel="stylesheet" type="text/css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <header>
-    <div>
-      <a href="#" class="logo"><span>S</span><span>J</span></a>
+    <a href="#" class="logo box-shadow"><span>SJ</span></a>
 
-      <nav>
-        <ul>
-          <li>
-            <a href="#">work</a>
-          </li>
-          <li>
-            <a href="#">experience</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <input class="hamburger-icon" type="checkbox" name="hamburger" id="hamburger">
+    <label for="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav>
+      <ul>
+        <li>
+          <a class="active box-shadow" href="#"><span>about me</span></a>
+        </li>
+        <li>
+          <a class="box-shadow" href="#"><span>my work</span></a>
+        </li>
+        <li>
+          <a class="box-shadow" href="#"><span>experience</span></a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <main>
 
     <section>
-      <h1>Super cool heading that says something about you!</h1>
+      <span>&#9999;&#128421;</span>
+      <h1>Something cool about you here, stuff etc <span class="highlighter">very cool!</span></h1>
 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eveniet veritatis nobis assumenda, consequuntur
-        delectus ipsum temporibus quasi quia dolorum autem dolorem voluptas ratione harum in consequatur sint laudantium
-        culpa!</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eveniet veritatis nobis assumenda, consequuntur
-        delectus ipsum temporibus quasi quia dolorum autem dolorem voluptas ratione harum in consequatur sint laudantium
-        culpa!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet neque mauris. Suspendisse potenti. Praesent ac
+      nisl semper, porttitor nibh nec, pretium lorem. Integer facilisis rutrum orci non suscipit. Etiam viverra et arcu non
+      ultricies. Phasellus maximus eget neque consectetur ultricies. Fusce a volutpat dolor, in venenatis mi. Nullam quis arcu
+      at libero vehicula ultricies.</p>
 
-      <a class="btn" href="mailto:stephanie2096726@gmail.com">Get in touch with me</a>
+      <!-- <a class="btn" href="mailto:stephanie2096726@gmail.com">Get in touch with me</a> -->
     </section>
 
     <section>
-      <h1>My work</h1>
-
       <ul class="grid">
         <li>
-          <a href="#">
+          <a class="box-shadow" href="#">
             <figure>
               <picture>
-                <img src="https://images.unsplash.com/photo-1546527868-ccb7ee7dfa6a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="">
+                <img src="./images/dummy-thumbnail.png" alt="">
               </picture>
 
               <figcaption>
-                <p>Title</p>
+                <div>
+                  <h3>Project name</h3>
+                  <p>Some description here about project</p>
+                </div>
+
+                <span class="btn--arrow"><img src="./images/icons/arrow-down.svg" alt=""></span>
               </figcaption>
             </figure>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a class="box-shadow" href="#">
             <figure>
               <picture>
-                <img src="https://images.unsplash.com/photo-1546527868-ccb7ee7dfa6a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="">
+                <img src="./images/dummy-thumbnail.png" alt="">
               </picture>
 
               <figcaption>
-                <p>Title</p>
+                <div>
+                  <h3>Project name</h3>
+                  <p>Some description here about project</p>
+                </div>
+
+                <span class="btn--arrow"><img src="./images/icons/arrow-down.svg" alt=""></span>
               </figcaption>
             </figure>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a class="box-shadow" href="#">
             <figure>
               <picture>
-                <img src="https://images.unsplash.com/photo-1546527868-ccb7ee7dfa6a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="">
+                <img src="./images/dummy-thumbnail.png" alt="">
               </picture>
 
               <figcaption>
-                <p>Title</p>
+                <div>
+                  <h3>Project name</h3>
+                  <p>Some description here about project</p>
+                </div>
+
+                <span class="btn--arrow"><img src="./images/icons/arrow-down.svg" alt=""></span>
               </figcaption>
             </figure>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a class="box-shadow" href="#">
             <figure>
               <picture>
-                <img src="https://images.unsplash.com/photo-1546527868-ccb7ee7dfa6a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="">
+                <img src="./images/dummy-thumbnail.png" alt="">
               </picture>
 
               <figcaption>
-                <p>Title</p>
+                <div>
+                  <h3>Project name</h3>
+                  <p>Some description here about project</p>
+                </div>
+
+                <span class="btn--arrow"><img src="./images/icons/arrow-down.svg" alt=""></span>
               </figcaption>
             </figure>
           </a>
@@ -112,14 +133,69 @@
     <section>
       <h1>Experience</h1>
     
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eveniet veritatis nobis assumenda, consequuntur
-        delectus ipsum temporibus quasi quia dolorum autem dolorem voluptas ratione harum in consequatur sint laudantium
-        culpa!</p>
+      <ul class="timeline">
+        <li>
+          <div>
+            <p>june 2018 - february 2021</p>
+          </div>
+
+          <a class="box-shadow" href="#">
+            <div>
+              <h3>Experience title</h3>
+              <p>Some description here about what you did</p>
+            </div>
+            
+            <span class="btn--arrow"><img src="./images/icons/arrow-down.svg" alt=""></span>
+          </a>
+        </li>
+        <li>
+          <div>
+            <p>june 2018 - february 2021</p>
+          </div>
+
+          <a class="box-shadow" href="#">
+            <div>
+              <h3>Experience title</h3>
+              <p>Some description here about what you did</p>
+            </div>
+            
+            <span class="btn--arrow"><img src="./images/icons/arrow-down.svg" alt=""></span>
+          </a>
+        </li>
+        <li>
+          <div>
+            <p>june 2018 - february 2021</p>
+          </div>
+
+          <a class="box-shadow" href="#">
+            <div>
+              <h3>Experience title</h3>
+              <p>Some description here about what you did</p>
+            </div>
+            
+            <span class="btn--arrow"><img src="./images/icons/arrow-down.svg" alt=""></span>
+          </a>
+        </li>
+        <li>
+          <div>
+            <p>june 2018 - february 2021</p>
+          </div>
+
+          <a class="box-shadow" href="#">
+            <div>
+              <h3>Experience title</h3>
+              <p>Some description here about what you did</p>
+            </div>
+            
+            <span class="btn--arrow"><img src="./images/icons/arrow-down.svg" alt=""></span>
+          </a>
+        </li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <a href="#" class="logo"><span>S</span><span>J</span></a>
+    <a href="#" class="logo box-shadow"><span>SJ</span></a>
   </footer>
 
 
