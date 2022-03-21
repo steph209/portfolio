@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio | Stephanie Jimenez</title>
-  <link href="./styles/style.css?v=4" media="screen" rel="stylesheet" type="text/css">
+  <link href="./styles/style.css?v=5" media="screen" rel="stylesheet" type="text/css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,37 +13,39 @@
 </head>
 
 <body>
-
   <header>
-    <a href="#" class="logo box-shadow"><span>SJ</span></a>
+    <div>
 
-    <input class="hamburger-icon" type="checkbox" name="hamburger" id="hamburger">
-    <label for="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
+      <a href="#" class="logo box-shadow"><span>SJ</span></a>
 
-    <nav>
-      <ul>
-        <li>
-          <a class="active box-shadow" href="#"><span>about me</span></a>
-        </li>
-        <li>
-          <a class="box-shadow" href="#"><span>my work</span></a>
-        </li>
-        <li>
-          <a class="box-shadow" href="#"><span>experience</span></a>
-        </li>
-      </ul>
-    </nav>
+      <input class="hamburger-icon" type="checkbox" name="hamburger" id="hamburger">
+      <label for="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav>
+        <ul>
+          <li class="active">
+            <a class="menu-item box-shadow" href="#about"><span>about me</span></a>
+          </li>
+          <li>
+            <a class="menu-item box-shadow" href="#work"><span>my work</span></a>
+          </li>
+          <li>
+            <a class="menu-item box-shadow" href="#experience"><span>experience</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
 
-    <section>
-      <span>&#9999;&#128421;</span>
-      <h1>Hi cool about you here, stuff etc <span class="highlighter">very cool!</span></h1>
+    <section id="about">
+      <span class="emoji">&#127912; &#128421;</span>
+      <h1>Something cool about you here, stuff etc <span class="highlighter">very cool!</span></h1>
 
       <p>Hi! My name is Stephanie Jimenez and I am a motion graphic designer. I have been studying Design & Production
         at the University of Texas at Dallas since 2018. Phasellus maximus eget neque consectetur ultricies. Fusce a volutpat dolor, in venenatis mi. Nullam quis arcu
@@ -52,7 +54,7 @@
       <!-- <a class="btn" href="mailto:stephanie2096726@gmail.com">Get in touch with me</a> -->
     </section>
 
-    <section>
+    <section id="work">
       <ul class="grid">
         <li>
           <a class="box-shadow" href="#">
@@ -129,13 +131,13 @@
       </ul>
     </section>
 
-    <section>
+    <section id="experience">
       <h1>Experience</h1>
     
       <ul class="timeline">
         <li>
           <div>
-            <p>june 2018 - february 2021</p>
+            <p>jun 2018 - dec 2021</p>
           </div>
 
           <a class="box-shadow" href="#">
@@ -149,7 +151,7 @@
         </li>
         <li>
           <div>
-            <p>june 2018 - february 2021</p>
+            <p>jun 2018 - dec 2021</p>
           </div>
 
           <a class="box-shadow" href="#">
@@ -163,7 +165,7 @@
         </li>
         <li>
           <div>
-            <p>june 2018 - february 2021</p>
+            <p>jun 2018 - dec 2021</p>
           </div>
 
           <a class="box-shadow" href="#">
@@ -177,7 +179,7 @@
         </li>
         <li>
           <div>
-            <p>june 2018 - february 2021</p>
+            <p>jun 2018 - dec 2021</p>
           </div>
 
           <a class="box-shadow" href="#">
@@ -197,7 +199,7 @@
     <a href="#" class="logo box-shadow"><span>SJ</span></a>
   </footer>
 
-
+  <script src="./js/scroll-helper.js"></script>
 </body>
 
 </html>
