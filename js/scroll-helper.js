@@ -6,6 +6,8 @@ for (let i = 0; i < menuItems.length; i++) {
     const element = menuItems[i];
     
     element.addEventListener('click', (e) => {
+        e.preventDefault();
+
         if (e.target !== this) {
             menuItems.forEach((item) => {
                 item.parentNode.classList.remove("active");
@@ -15,6 +17,12 @@ for (let i = 0; i < menuItems.length; i++) {
 
             navElement.classList.toggle("close-nav");
             hamburgerIcon.checked = false;
+
+            if(navElement.classList.contains("close-nav")) {
+                setTimeout(() => {
+                    window.location.href = e.target.closest('a').href;
+                }, 300);
+            }
         };
     });
 }
