@@ -197,6 +197,10 @@ ul, ol {
   display: inline-block;
 }
 
+.highlighter + .highlighter {
+  padding-left: 12px;
+}
+
 .highlighter::before {
   content: "";
 
