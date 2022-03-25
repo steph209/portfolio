@@ -273,14 +273,14 @@ ul, ol {
 /* =============================================================================
   #HAMBURGER ICON
 ============================================================================= */
-  .hamburger-icon {
-    position: absolute;
+.hamburger-icon {
+  position: absolute;
 
-    visibility: hidden;
-    top: 0;
-    right: 0;
-    z-index: 110;
-  }
+  visibility: hidden;
+  top: 0;
+  right: 0;
+  z-index: 110;
+}
 
   .hamburger-icon + label {
     position: absolute;
@@ -385,6 +385,10 @@ header {
       z-index: 100;
     }
 
+    nav.close-nav {
+      transform: translateX(100%)!important;
+    }
+
     .hamburger-icon:checked ~ nav {
       transform: translateX(0);
     }
@@ -431,21 +435,14 @@ header {
           color: var(--white-color);
         }
 
-        nav ul li.active a.box-shadow::before {
+        nav ul li.active a.box-shadow::before,
+        nav ul li:hover a.box-shadow::after {
           background-color: var(--blue-color);
         }
 
         nav ul li:hover a.box-shadow::after {
           top: 7px;
           left: 7px;
-        }
-
-        nav ul li:nth-of-type(2):hover a.box-shadow::after {
-          background-color: var(--red-color);
-        }
-
-        nav ul li:nth-of-type(3):hover a.box-shadow::after {
-          background-color: var(--yellow-color);
         }
 
         nav ul li:hover a.box-shadow {
@@ -465,6 +462,56 @@ header {
           top: 7px;
           left: 7px;
         }
+/* =============================================================================
+  #CASE NAV
+============================================================================= */
+.case header div {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 0 auto;
+
+  height: 100%;
+}
+
+  .case .hamburger-icon + label {
+    display: none;
+  }
+
+  .case nav {
+    position: relative;
+
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    transform: translate(0);
+
+    padding: 0;
+    height: 100%;
+
+    background-color: transparent;
+    transition: none;
+  }
+
+    .case nav ul {
+      flex-direction: row;
+      width: auto;
+      height: 100%;
+    }
+
+      .case nav ul li {
+        margin-top: 7px;
+        font-size: 16px;
+        font-size: 1.6rem;
+      }
+
+      .case nav ul li.active {
+        transform: translate(-7px, -7px);
+      }
 /* =============================================================================
   #MAIN
 ============================================================================= */
@@ -530,14 +577,33 @@ section + section {
         }
 
         .grid li figure > picture {
-          height: 250px;
+          height: 180px;
         }
 
+        .grid li:first-of-type figure > picture {
+          background-color: #ebe2b6;
+        }
+
+        .grid li:nth-of-type(2) figure > picture {
+          background-color: #022a4a;
+        }
+
+        .grid li:nth-of-type(3) figure > picture {
+          background-color: #fdf9df;
+        }
+
+        .grid li:last-of-type figure > picture {
+            background-color: #416175;
+        }
+
+
           .grid li figure > picture img {
+            padding: 5px;
+
             width: 100%;
             height: 100%;
 
-            object-fit: cover;
+            object-fit: contain;
             object-position: center;
           }
 
@@ -746,13 +812,12 @@ button, .btn {
   transition: var(--default-transition);
 }
 
-.btn:hover {
-  transform: var(--expanded-transform);
-  box-shadow: var(--expanded-shadow);
-}
-
 * + .btn {
   margin-top: var(--default-padding);
+}
+
+.btn:hover {
+  transform: scale(1.02);
 }
 
 .btn--arrow {
@@ -791,17 +856,20 @@ footer {
   #MEDIAQUERIES
 ============================================================================= */
 @media screen and (min-width: 600px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-
   .btn {
     width: auto;
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 770px) {
+  .grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+  }
+
+    .grid li figure > picture {
+      height: 250px;
+    }
 }
 
 @media screen and (min-width: 850px) {
@@ -890,7 +958,7 @@ footer {
     }
 
     .timeline li::before {
-      left: calc(190px + 25.5px);
+      left: calc(200px + 25.5px);
     }
 
     .timeline li:first-of-type::before {
@@ -902,8 +970,8 @@ footer {
     }
 
       .timeline li > div {
-        min-width: 190px;
-        width: 190px;
+        min-width: 200px;
+        width: 200px;
 
         text-align: center;
 
